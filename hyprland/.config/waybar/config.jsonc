@@ -1,0 +1,68 @@
+{
+    "position": "top",
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["custom/pacman", "pulseaudio", "battery", "network", "clock"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "󰆍",
+            "2": "󰚌",
+            "3": "󱄳",
+            "4": "󰣙",
+            "5": "󱎓",
+            "6": "󰋟",
+            "7": "󰩱",
+            "8": "󰯙",
+            "9": "󰳗"
+        },
+        "sort-by-number": true
+    },
+    "hyprland/window": {
+	"max-length": 75,
+        "format": "{}",
+        "separate-outputs": true
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%d.%m.%y}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": ["", ""],
+        "scroll-step": 1,
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "battery": {
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": {
+            "charging": "󰚥",
+            "default": [" ", " ", " ", " ", " "]
+        }
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": " ",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-disconnected": "we are sooo alone...",
+        "max-length": 50
+    },
+    "custom/pacman": {
+        "format": "{} ",
+        "interval": 3600,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8
+    }
+}

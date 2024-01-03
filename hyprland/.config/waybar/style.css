@@ -1,0 +1,72 @@
+@import "macchiato.css";
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrains Mono Nerd Font;
+    font-size: 12px;
+    min-height: 20px;
+}
+
+window#waybar {
+    background: @crust;
+    color: @text;
+    border: 0px solid transparent;
+}
+
+tooltip {
+  background: @crust;
+  border: 1px solid @peach;
+}
+tooltip label {
+  color: @text;
+}
+#workspaces {
+    padding: 0px;
+    margin: 0px;
+    background: @base;
+}
+#workspaces button {
+    padding: 0px 2px;
+    margin: 0px;
+    color: @teal;
+    background: @base;
+}
+#workspaces button.inactive {
+    color: @teal;
+    background: transparent;
+}
+#workspaces button.active {
+    color: @base;
+    background: @teal;
+}
+
+#clock, #battery, #pulseaudio, #network, #bluetooth, #custom-pacman {
+    padding: 0px 8px;
+    margin: 0px 0px;
+    background: @base;
+}
+#clock {
+    color: @base;
+    background: @green;
+}
+#pulseaudio {
+    color: @lavender;
+}
+#custom-pacman {
+    color: @yellow;
+}
+#battery {
+    color: @sky;
+}
+#battery.charging {
+    color: @green;
+}
+#battery.warning:not(.charging) {
+    color: @peach;
+}
+#battery.critical:not(.charging) {
+    color: @red;
+}
+#network {
+    color: @teal;
+}
