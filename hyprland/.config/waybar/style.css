@@ -1,72 +1,62 @@
-@import "macchiato.css";
 * {
-    border: none;
-    border-radius: 0;
     font-family: JetBrains Mono Nerd Font;
     font-size: 12px;
-    min-height: 20px;
 }
-
-window#waybar {
-    background: @crust;
-    color: @text;
-    border: 0px solid transparent;
-}
-
 tooltip {
-  background: @crust;
-  border: 1px solid @peach;
+    background: #1f2329;
+    margin: 2px;
+    border-radius: 0;
 }
-tooltip label {
-  color: @text;
+window#waybar {
+    background: #1f2329;
+    color: #a0a8b7;
 }
+
 #workspaces {
-    padding: 0px;
-    margin: 0px;
-    background: @base;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    background: #323641;
 }
 #workspaces button {
     padding: 0px 2px;
     margin: 0px;
-    color: @teal;
-    background: @base;
+    border-radius: 0;
 }
 #workspaces button.inactive {
-    color: @teal;
+    color: #48b0bd;
     background: transparent;
 }
 #workspaces button.active {
-    color: @base;
-    background: @teal;
+    color: #1f2329;
+    background: #bf68d9;
 }
 
-#clock, #battery, #pulseaudio, #network, #bluetooth, #custom-pacman {
+#clock, #battery, #pulseaudio, #network, #bluetooth {
     padding: 0px 8px;
-    margin: 0px 0px;
-    background: @base;
+    margin: 4px 0px;
+    background: #323641;
 }
 #clock {
-    color: @base;
-    background: @green;
+    margin-right: 4px;
+    color: #1f2329;
+    background: #8ebd6b;
 }
 #pulseaudio {
-    color: @lavender;
-}
-#custom-pacman {
-    color: @yellow;
+    color: #bf68d9;
 }
 #battery {
-    color: @sky;
+    color: #8ebd6b;
 }
 #battery.charging {
-    color: @green;
+    color: #4fa6ed;
 }
 #battery.warning:not(.charging) {
-    color: @peach;
+    color: #cc9057;
 }
 #battery.critical:not(.charging) {
-    color: @red;
+    color: #e55561;
 }
 #network {
-    color: @teal;
+    color: #e2b86b;
 }
