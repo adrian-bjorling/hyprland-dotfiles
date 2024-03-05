@@ -1,4 +1,4 @@
-@import "~/.config/rofi/onedark.rasi"
+@import "~/.config/rofi/color/gruvbox-dark.rasi"
 /**
  *
  * Author : Aditya Shakya (adi1090x)
@@ -264,3 +264,4 @@ error-message {
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
 }
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

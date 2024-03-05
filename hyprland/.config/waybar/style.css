@@ -7,7 +7,8 @@ tooltip {
     margin: 2px;
 }
 window#waybar {
-    background: #282828;
+    /* background: #282828; */
+    background: transparent;
     color: #a0a8b7;
 }
 
@@ -15,6 +16,7 @@ window#waybar {
     padding: 0px 2px;
 }
 #workspaces button {
+    min-width: 20px;
     padding: 0px 2px;
     margin: 0px;
     border-radius: 0;
@@ -26,9 +28,19 @@ window#waybar {
     border-bottom: 2px solid #ebdbb2;
 }
 
-#clock, #battery, #pulseaudio, #network, #bluetooth {
+#window {
     padding: 0px 8px;
-    margin: 0px 4px;
+    background: #282828; 
+    border-bottom: 2px solid #928374;
+}
+/* window#waybar.empty #window { */
+/*     background-color: transparent; */
+/*     border-bottom: 0px; */
+/* } */
+
+#clock, #battery, #pulseaudio, #pulseaudio-slider, #network, #bluetooth {
+    padding: 0px 8px;
+    margin: 0px 0px;
     background: #404040;
     border-bottom: 2px solid;
 }
@@ -37,7 +49,33 @@ window#waybar {
     border-color: #98971a;
 }
 #pulseaudio {
-    border-color: #bf68d9;
+    padding-right: 4px;
+    margin-right: 0;
+    border-color: #cc241d;
+}
+#pulseaudio-slider {
+    padding-left: 4px;
+    margin-left: 0;
+    border-color: #cc241d;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 75px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 6px;
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: #282828;
+}
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+    background-color: #a0a8b7;
 }
 #battery {
     border-color: #458588;
@@ -52,5 +90,6 @@ window#waybar {
     border-color: #cc241d;
 }
 #network {
+    border-left: 2px solid;
     border-color: #d79921;
 }

@@ -3,9 +3,9 @@
     "layer": "top",
     "mod": "dock",
     "margin": "4 4 0",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "pulseaudio",  "battery", "clock"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    // "modules-center": ["hyprland/window"],
+    "modules-right": ["network", "pulseaudio", "pulseaudio/slider",  "battery", "clock"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -25,7 +25,7 @@
     },
     "hyprland/window": {
 	"max-length": 75,
-        "format": "{}",
+        "format": " [{}]",
         "separate-outputs": true
     },
     "clock": {
@@ -33,11 +33,19 @@
         "format-alt": "{:%d.%m.%y}"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": ["", ""],
+        // "format": "{volume}% {icon}",
+        "format": "{icon}",
+        // "format-muted": "",
+        // "format-icons": ["", ""],
+        "format-muted": "󰝙",
+        "format-icons": "󰣐",
         "scroll-step": 1,
         "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
     },
     "battery": {
         "states": {
