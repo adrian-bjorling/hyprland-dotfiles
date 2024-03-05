@@ -30,7 +30,7 @@
     },
     "clock": {
         "format": "{:%H:%M}  ",
-        "format-alt": "{:%A, %B %d, %Y (%R)}  "
+        "format-alt": "{:%d-%m-%Y, %R}  "
     },
     "pulseaudio": {
         "format": "{icon}",

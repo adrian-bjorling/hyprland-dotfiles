@@ -82,15 +82,15 @@ window#waybar {
 #battery {
     border-color: #cc241d;
 }
-#battery.charging {
-    border-color: #98971a;
-}
-#battery.warning:not(.charging) {
-    border-color: #d79921;
-}
-#battery.critical:not(.charging) {
-    border-color: #cc241d;
-}
+/* #battery.charging { */
+/*     border-color: #98971a; */
+/* } */
+/* #battery.warning:not(.charging) { */
+/*     border-color: #d79921; */
+/* } */
+/* #battery.critical:not(.charging) { */
+/*     border-color: #cc241d; */
+/* } */
 #network {
     border-color: #d79921;
 }
