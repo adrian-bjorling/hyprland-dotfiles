@@ -2,7 +2,7 @@
     "position": "top",
     "layer": "top",
     "mod": "dock",
-    "margin": "4 4 0",
+    "margin": "0 0 0",
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     // "modules-center": ["hyprland/window"],
     "modules-right": ["network", "pulseaudio", "pulseaudio/slider",  "battery", "clock"],
