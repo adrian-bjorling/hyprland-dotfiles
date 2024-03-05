@@ -29,8 +29,8 @@
         "separate-outputs": true
     },
     "clock": {
-        "format": "{:%H:%M}  ",
-        "format-alt": "{:%d-%m-%Y, %R}  "
+        "format": "{:%d-%m-%Y, %H:%M}  "
+        // "format-alt": "{:%d-%m-%Y, %R}  "
     },
     "pulseaudio": {
         "format": "{icon}",
