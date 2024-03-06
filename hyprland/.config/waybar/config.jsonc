@@ -2,41 +2,38 @@
     "position": "top",
     "layer": "top",
     "mod": "dock",
-    "margin": "4 4 0",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "pulseaudio/slider", "battery", "network", "clock"],
+    "margin": "8 8 0",
+    "modules-left": ["custom/windowprefix", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["pulseaudio", "pulseaudio/slider", "custom/batprefix", "battery", "custom/netprefix", "network", "custom/clockprefix", "clock"],
 
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
-        "format-icons": {
-            "1": "󰆍",
-            "2": "󰚌",
-            "3": "󱄳",
-            "4": "󰣙",
-            "5": "󱎓",
-            "6": "󰋟",
-            "7": "󰩱",
-            "8": "󰯙",
-            "9": "󰳗"
-        },
         "sort-by-number": true
     },
+    "custom/windowprefix": {
+        "format": " "
+    },
     "hyprland/window": {
-	"max-length": 100,
-        "format": "[{}]",
+	"max-length": 25,
+        "format": "{}",
         "separate-outputs": true
     },
-    "clock": {
-        "format": "{:%d-%m-%Y, %H:%M}  "
-        // "format-alt": "{:%d-%m-%Y, %R}  "
+    "custom/audioprefix": {
+        "format": " "
     },
     "pulseaudio": {
         "format": "{icon}",
-        "format-muted": "󱈾",
-        "format-icons": "󰂔",
+        "format-bluetooth": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": " ",
+            "headset": "",
+            "default": [""]
+        },
         "scroll-step": 1,
+        "on-click": "alacritty -e alsamixer",
         "ignored-sinks": ["Easy Effects Sink"]
     },
     "pulseaudio/slider": {
@@ -44,24 +41,41 @@
         "max": 100,
         "orientation": "horizontal"
     },
+    "custom/batprefix": {
+        "format": "󰂄",
+        "tooltip": false,
+        "on-click": ""
+    },
     "battery": {
         "states": {
             "warning": 20,
             "critical": 10
         },
-        "format": "{icon}",
+        "format": "{capacity}%",
         "format-icons": {
-            "charging": "󰗶 󰗶 󰗶 󰗶 󰗶 ",
-            "default": ["     ", "     ", "     ", "     ", "     ", "     ", "     "]
-        }
+            "charging": "󰗶 󰗶 󰗶 ",
+            "default": ["   ", "   ", "   ", "   "]
+        },
+        "format-time": "{H} h {M} min",
+        "tooltip-format": "{capacity}% ({time})"
+    },
+    "custom/netprefix": {
+        "format": " "
     },
     "network": {
         "interface": "wlp2s0",
         "format": "{ifname}",
-        "format-wifi": " ",
-        "format-disconnected": "",
+        "format-wifi": "{signalStrength}%",
+        "format-disconnected": "{signalStrength}%",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-disconnected": "we are sooo alone...",
         "max-length": 50
+    },
+    "custom/clockprefix": {
+        "format": ""
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%d-%m-%Y, %R}"
     }
 }
