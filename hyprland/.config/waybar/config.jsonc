@@ -2,7 +2,7 @@
     "position": "top",
     "layer": "top",
     "mod": "dock",
-    "margin": "8 8 0",
+    "margin": "0 0 0",
     "modules-left": ["custom/windowprefix", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["pulseaudio", "pulseaudio/slider", "custom/batprefix", "battery", "custom/netprefix", "network", "custom/clockprefix", "clock"],
