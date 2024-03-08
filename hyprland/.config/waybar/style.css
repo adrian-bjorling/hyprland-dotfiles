@@ -33,33 +33,31 @@ window#waybar {
 }
 #custom-windowprefix {
     padding: 0 4px;
-    margin: 3px 0px 3px 4px;
+    margin: 4px 0px 4px 4px;
+    min-width: 20px;
     color: #282828;
     background: #689d6a;
 }
 #window {
     padding: 0px 4px;
-    margin: 3px 4px 3px 0px;
+    margin: 4px 4px 4px 0px;
     color: #282828;
     background: #8ec07c;
 }
+window#waybar.empty #window {
+    background-color: transparent;
+}
 
 #pulseaudio, #custom-batprefix , #custom-netprefix, #custom-clockprefix {
-    padding: 0px 4px;
-    margin: 3px 0px 3px 4px;
+    padding: 0px 8px;
+    margin: 4px 0px 4px 4px;
     min-width: 15px;
     color: #282828;
 }
 #clock, #battery, #pulseaudio-slider, #network, #bluetooth {
-    padding: 0px 4px;
-    margin: 3px 4px 3px 0px;
+    padding: 0px 8px;
+    margin: 4px 4px 4px 0px;
     color: #404040;
-}
-#custom-audioprefix {
-    background: #458588;
-}
-#pulseaudio {
-    background: #83a598;
 }
 #pulseaudio {
     background: #458588;

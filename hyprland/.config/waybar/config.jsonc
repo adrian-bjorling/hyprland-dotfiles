@@ -30,10 +30,10 @@
         "format-icons": {
             "headphone": " ",
             "headset": "",
-            "default": [""]
+            "default": [" "]
         },
         "scroll-step": 1,
-        "on-click": "alacritty -e alsamixer",
+        "on-click": "pavucontrol",
         "ignored-sinks": ["Easy Effects Sink"]
     },
     "pulseaudio/slider": {
